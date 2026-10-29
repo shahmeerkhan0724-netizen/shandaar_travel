@@ -1,0 +1,19 @@
+@import "tailwindcss";
+@theme {
+  --color-navy: #0B1739; --color-royal: #164E9A; --color-gold: #D6AD60; --color-mist: #F5F7FB;
+  --font-display: "Playfair Display", Georgia, serif;
+}
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { font-family: Inter, system-ui, sans-serif; color: #0B1739; background: #fff; }
+.btn { display:inline-flex; align-items:center; justify-content:center; gap:.5rem; border-radius:9999px; padding:.7rem 1.4rem; font-weight:600; font-size:.9rem; transition:all .2s; cursor:pointer; }
+.btn:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, button:focus-visible { outline:2px solid #D6AD60; outline-offset:2px; }
+.btn-gold { background:#D6AD60; color:#0B1739; } .btn-gold:hover { background:#e4c07a; transform:translateY(-1px); }
+.btn-ghost { border:1.5px solid rgba(255,255,255,.7); color:#fff; } .btn-ghost:hover { background:rgba(255,255,255,.12); }
+.btn-wa { background:#128C4A; color:#fff; } .btn-wa:hover { background:#0f7a40; }
+.btn-outline { border:1.5px solid #164E9A; color:#164E9A; } .btn-outline:hover { background:#164E9A; color:#fff; }
+.card { background:#fff; border-radius:1.25rem; box-shadow:0 8px 28px rgba(11,23,57,.08); transition:transform .25s, box-shadow .25s; }
+.card:hover { transform:translateY(-4px); box-shadow:0 14px 36px rgba(11,23,57,.14); }
+.eyebrow { color:#B8893A; font-weight:600; font-size:.8rem; letter-spacing:.14em; text-transform:uppercase; }
+@keyframes rise { from { opacity:0; transform:translateY(16px);} to { opacity:1; transform:none; } }
+.rise { animation: rise .7s ease both; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .rise { animation:none; } .card:hover { transform:none; } }
